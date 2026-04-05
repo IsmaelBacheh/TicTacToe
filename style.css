@@ -1,0 +1,128 @@
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+body {
+  background-color: #0cba63;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh; /* Centers the whole game vertically on the screen */
+}
+
+/* Header Text */
+.players-info-panel {
+  color: rgb(213, 223, 9);
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 60%;
+}
+
+.player-panel {
+  background-color: rgba(38, 72, 63, 0.289);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 45%;
+}
+
+.x {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ba0c0c;
+}
+.o {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #0020be;
+}
+
+/* The Board Container */
+.gameLocation {
+  background-color: #111111; /* Dark border lines between squares */
+  padding: 10px;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  
+  /* The Magic Grid Lines */
+  display: grid;
+  grid-template-columns: repeat(3, 100px); /* 3 columns, each 100px wide */
+  grid-template-rows: repeat(3, 100px);    /* 3 rows, each 100px tall */
+  gap: 10px; /* This creates the visible lines of the board */
+}
+
+/* The 9 Individual Squares */
+.cell {
+  background-color: #ffffff;
+  border-radius: 8px;
+  cursor: pointer;
+  
+  /* Centers the 'X' or 'O' text perfectly inside the box */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  /* Font styling for the symbols */
+  font-size: 3rem;
+  font-weight: bold;
+  color: #333;
+  
+  /* Smooth transition effect when hovering */
+  transition: background-color 0.2s ease;
+}
+
+/* Hover effect so players know they can click it */
+.cell:hover {
+  background-color: #e8f5e9;
+}
+
+/* Restart Button */
+.reset-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #0cba63;
+  background-color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.reset-btn:hover {
+  background-color: #f1f1f1;
+}
+
+footer {
+    margin-top: 30px;
+    background-color: #046c2d;
+    color: #ccc;
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+}
+
+footer a {
+    color: #4da6ff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: #80c1ff;
+}
+
+footer strong {
+    color: #fff;
+}
